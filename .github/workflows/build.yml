@@ -24,6 +24,7 @@ jobs:
           npm i @capacitor/core@6 @capacitor/cli@6 @capacitor/android@6 @capacitor/local-notifications@6
           npx cap init "YKS 2027" com.yks.sayac --web-dir=www
           npx cap add android
+          python3 patch.py
           npx cap sync android
       - name: Derle
         run: cd android && ./gradlew assembleDebug
